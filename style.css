@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+
+  --Blue: hsl(248, 32%, 49%);
+
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  background: url(./images/bg-intro-desktop.png) repeat center/cover;
+  background-color: var(--Red);
+}
+
+.container {
+    margin: 4em 10em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3em;
+    max-width: 100%;
+}
+
+article {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+article .heading {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.form-header {
+    background-color: var(--Blue);
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 0 rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.form-header span {
+    font-weight: 600;
+}
+
+
+form {
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 0 rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.field {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.field .input-form {
+    width: 100%;
+    padding: 20px 35px;
+    border-radius: 5px;
+    border: 1px solid var(--Grayish-Blue);
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.field label {
+    font-size: 13px;
+    font-style: italic;
+    align-self: flex-end;
+    margin: 10px 10px 0;
+    color: var(--Red);
+    display: none;
+}
+
+.error-icon {
+    position: absolute;
+    right: 0;
+    top: 18px;
+    margin-right: 10px;
+    display: none;
+}
+
+
+form #submit {
+    background-color: var(--Green);
+    padding: 20px 35px;
+    width: 100%;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 2px solid rgb(0, 155, 0);
+    border-bottom: 5px solid rgb(0, 155, 0);
+    cursor: pointer;
+}
+
+.form-footer {
+    margin-top: 15px;
+    color: rgb(214, 214, 214);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-footer span {
+    color: var(--Red);
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .container {
+        margin: 2em auto;
+        grid-gap: 0;
+        grid-template-columns: 1fr;
+    }
+
+    article {
+        text-align: center;
+        margin: 0 2em 2em;
+    }
+
+    article .heading {
+        font-size: 1em;
+    }
+
+    .register {
+        margin: 0 1em;
+    }
+
+    form {
+        padding: 2em;
+    }
+}
