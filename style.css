@@ -51,7 +51,7 @@ article .heading {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 10px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 10px 0 rgba(0,0,0,0.1);
     cursor: pointer;
 }
 
@@ -64,7 +64,7 @@ form {
     background-color: #fff;
     padding: 3rem;
     border-radius: 10px;
-    box-shadow: 0 10px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 10px 0 rgba(0,0,0,0.1);
     text-align: center;
 }
 
@@ -111,8 +111,8 @@ form #submit {
     font-size: 1rem;
     text-transform: uppercase;
     border-radius: 5px;
-    border: 2px solid rgb(0, 155, 0);
-    border-bottom: 5px solid rgb(0, 155, 0);
+    border: 1px solid rgb(0, 155, 0);
+    border-bottom: 4px solid rgba(0, 155, 0,0.2);
     cursor: pointer;
 }
 
@@ -138,19 +138,24 @@ form #submit {
 }
 
 @media (max-width: 900px) {
+    body {
+        background: url(./images/bg-intro-mobile.png) repeat center/cover;
+        background-color: var(--Red) !important;
+    }
+    
     .container {
-        margin: 2em auto;
+        margin: 4em auto;
         grid-gap: 0;
         grid-template-columns: 1fr;
     }
 
     article {
         text-align: center;
-        margin: 0 2em 2em;
+        margin: 2em 2em 6em;
     }
 
     article .heading {
-        font-size: 1em;
+        font-size: 1.8em;
     }
 
     .register {
@@ -159,5 +164,9 @@ form #submit {
 
     form {
         padding: 2em;
+    }
+
+    .field .input-form {
+        padding: 20px;
     }
 }
